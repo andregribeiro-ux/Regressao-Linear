@@ -7,9 +7,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Ler a planilha do excel e substituir a "," por um "." (Se não o python não aceita)
-dados = pd.read_excel(r"C:\Users\andre\Downloads\vendas_ficticias_regressao_linear.xlsx")
+dados = pd.read_excel(r"Coloque o caminho do seu arquivo que foi baixado aqui") 
 dados['Vendas'].replace(",", ".")
-dados['Dias'] = (dados['Data'] - dados['Data'].min()).dt.days
+dados['Dias'] = (dados['Data'] - dados['Data'].min()).dt.days #Fazendo uma nova coluna chamada dias
 
 # Visualizando os valores máximos registrados
 print(max(dados["Vendas"]))
